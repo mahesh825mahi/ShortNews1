@@ -1,0 +1,28 @@
+{
+	"news":{
+		"type":"all",
+		"status":true,
+		"news-list":[
+			{
+				"title":"Android",
+				"descriptions":"A",
+				"url":"https://www.gstatic.com/webp/gallery3/2.png"
+			},
+			{
+				"title":"iOS",
+				"descriptions":"B+",
+				"url":"https://www.gstatic.com/webp/gallery3/1.png"
+			},
+			{
+				"title":".Net",
+				"descriptions":"B",
+				"url":"https://www.gstatic.com/webp/gallery3/3.png"
+			},
+			{
+				"title":"Capstone",
+				"descriptions":"Pass",
+				"url":"https://www.gstatic.com/webp/gallery3/5.png"
+			}
+		]
+	}
+}
