@@ -1,5 +1,4 @@
 package com.org.max.shortnews1;
-
 import org.junit.Test;
 
 import static org.junit.Assert.*;

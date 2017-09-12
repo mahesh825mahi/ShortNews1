@@ -1,5 +1,4 @@
 package com.org.max.shortnews1.ui.home;
-
 import android.arch.lifecycle.LifecycleActivity;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
@@ -33,16 +32,13 @@ import butterknife.ButterKnife;
 public class HomeActivity extends LifecycleActivity implements SwipeRefreshLayout.OnRefreshListener, NavigationView.OnNavigationItemSelectedListener, NewsAdapter.MessageAdapterListener, IHomeView {
     private String TAG = HomeActivity.class.getName();
     private Context ctx;
-
     private RecyclerView recyclerView;
     private List<NewsEntity> newsList = new ArrayList<>();
     private NewsAdapter mAdapter;
     private SwipeRefreshLayout swipeRefreshLayout;
-
     public HomePresenter homePresenter;
     //To get the LiveData
     private AddNewsViewModel getAddNewsViewModel;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -221,12 +217,14 @@ public class HomeActivity extends LifecycleActivity implements SwipeRefreshLayou
 
     @Override
     public void showProgress() {
-        swipeRefreshLayout.setRefreshing(true);
+        if (!swipeRefreshLayout.isRefreshing())
+            swipeRefreshLayout.setRefreshing(true);
     }
 
     @Override
     public void hideProgress() {
-        swipeRefreshLayout.setRefreshing(false);
+        if (swipeRefreshLayout.isRefreshing())
+            swipeRefreshLayout.setRefreshing(false);
     }
 
     public void populateData() {

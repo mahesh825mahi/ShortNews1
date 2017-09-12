@@ -24,7 +24,6 @@ public class AddNewsViewModel extends AndroidViewModel {
 
     public void addBorrow(final List<NewsEntity> newsEntityList) {
         new addAsyncTask(appDatabase, newsEntityList).execute("");
-
     }
 
     private static class addAsyncTask extends AsyncTask<String, Void, Void> {
@@ -41,6 +40,5 @@ public class AddNewsViewModel extends AndroidViewModel {
             db.itemAndPersonModel().addBorrow(newsEntityList);
             return null;
         }
-
     }
 }
